@@ -10,4 +10,3 @@ class ReviewAdmin(admin.ModelAdmin):
     """ Review Admin Definition """
 
     pass
-
