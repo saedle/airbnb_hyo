@@ -12,7 +12,7 @@ class CustomUserAdmin(UserAdmin):
 
     fieldsets = UserAdmin.fieldsets + (
         (
-            "Banana",
+            "Custom Profile",
             {
                 "fields": (
                     "avatar",
@@ -25,4 +25,18 @@ class CustomUserAdmin(UserAdmin):
                 )
             },
         ),
+    )
+
+    list_filter = UserAdmin.list_filter + ("superhost",)
+
+    list_display = (
+        "username",
+        "first_name",
+        "last_name",
+        "email",
+        "is_active",
+        "currency",
+        "superhost",
+        "is_staff",
+        "is_superuser",
     )
